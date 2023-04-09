@@ -1,10 +1,6 @@
-var total = 0;
-var carrinho = document.getElementById("carrinho");
-var totalDiv = document.createElement("div");
-totalDiv.id = "total";
-carrinho.appendChild(totalDiv);
-
 function adicionarAoCarrinho(nomePizza, imagemPizza, valorPizza) {
+    var valorPizza = 30;
+    var carrinho = document.getElementById("carrinho");
     var divPizza = document.createElement("div");
     divPizza.classList.add("item-carrinho");
   
@@ -18,7 +14,8 @@ function adicionarAoCarrinho(nomePizza, imagemPizza, valorPizza) {
     divNome.innerHTML = nomePizza;
   
     var divValor = document.createElement("div");
-    divValor.innerHTML = valorPizza;
+    divValor.innerHTML = "R$ " + valorPizza.toFixed(2);
+    divValor.classList.add("valor-total");
   
     var botaoRemover = document.createElement("button");
     var iconeRemover = document.createElement("i");
@@ -26,8 +23,7 @@ function adicionarAoCarrinho(nomePizza, imagemPizza, valorPizza) {
     botaoRemover.appendChild(iconeRemover);
     botaoRemover.onclick = function() {
       divPizza.remove();
-      total -= valorPizza;
-      totalDiv.innerHTML = "Total: R$ " + total;
+      atualizarTotal();
     };
   
     divPizza.appendChild(divImagem);
@@ -35,7 +31,26 @@ function adicionarAoCarrinho(nomePizza, imagemPizza, valorPizza) {
     divPizza.appendChild(divValor);
     divPizza.appendChild(botaoRemover);
   
-    carrinho.insertBefore(divPizza, totalDiv);
-    total += valorPizza;
-    totalDiv.innerHTML = "Total: R$ " + total;
-}
+    carrinho.appendChild(divPizza);
+  
+    atualizarTotal();
+  }
+
+  function atualizarTotal() {
+    var itensCarrinho = document.querySelectorAll(".item-carrinho");
+    var total = 0;
+    for (var i = 0; i < itensCarrinho.length; i++) {
+      var valorItem = parseFloat(
+        itensCarrinho[i].querySelector(".valor-total").innerHTML.replace("R$ ", "")
+      );
+      total += valorItem;
+    }
+    var divTotal = document.getElementById("total");
+    if (divTotal) {
+      divTotal.remove();
+    }
+    divTotal = document.createElement("div");
+    divTotal.innerHTML = "Total: R$ <span class='valor-total'>" + total.toFixed(2) + "</span>";
+    divTotal.id = "total";
+    document.getElementById("carrinho").appendChild(divTotal);
+  }

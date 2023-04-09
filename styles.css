@@ -6,7 +6,7 @@
 }
 .container-principal{
     padding: 2rem 12rem;
-    background-color: cornsilk;
+    background-color: rgb(195, 188, 159);
 }
 .container{
     display: flex;
@@ -41,6 +41,11 @@
     align-items: center;
     flex-direction: column;
     gap: 10px;
+}
+.card-pizza:hover{
+    width: 270px;
+    height: 330px;
+    transition: all 0.5s;
 }
 .card-pizza h2{
     color: green;
@@ -109,4 +114,7 @@
   
   .item-carrinho button i {
     margin-right: 5px;
+  }
+  .valor-total {
+    color: green;
   }
