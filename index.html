@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,10 +9,28 @@
     <title>projeto-pizzaria</title>
 </head>
     <body>
+        <div id="carregamento">
+            <div class="spinner"></div>
+        </div>
         <main>
             <div class="container-principal">
                 <div class="cabecalho-titulo">
                     <h1>Pizzaria do Andre</h1>
+                    <div class="hamburguer">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </div>
+                    <nav class="nav-bar">
+                        <ul class="menu-desk">
+                            <li><a style="color:  rgb(216, 31, 31);" href="">pizzas</a></li>
+                            <li><a href="">Refrigerantes</a></li>
+                        </ul>
+                        <ul class="menu-mobile">
+                            <li><a href="">pizzas</a></li>
+                            <li><a href="">Refrigerantes</a></li>
+                        </ul>
+                    </nav>
                 </div>
                 <div class="container">
                     <div class="card-pizzas">
@@ -43,7 +61,7 @@
                     </div>
                     <div class="total-a-pagar">
                         <div class="container-titulo-pagar">
-                            <h2>Meu carrinho</h2>
+                            <h2> carrinho</h2>
                         </div>
                         <div id="carrinho"></div>
                     </div>
@@ -51,5 +69,10 @@
             </div>
         </main>
         <script src="script.js"></script>
+        <script>
+            setTimeout(function() {
+                document.getElementById("carregamento").style.display = "none";
+            }, 3000);
+        </script>
     </body>
 </html>
