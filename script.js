@@ -19,7 +19,7 @@ function adicionarAoCarrinho(nomePizza, imagemPizza, valorPizza) {
   
     var botaoRemover = document.createElement("button");
     var iconeRemover = document.createElement("i");
-    iconeRemover.classList.add("fas", "fa-trash-alt");
+    iconeRemover.classList.add("fa", "fa-trash-alt");
     botaoRemover.appendChild(iconeRemover);
     botaoRemover.onclick = function() {
       divPizza.remove();
