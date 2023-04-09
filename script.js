@@ -52,5 +52,6 @@ function adicionarAoCarrinho(nomePizza, imagemPizza, valorPizza) {
     divTotal = document.createElement("div");
     divTotal.innerHTML = "Total: R$ <span class='valor-total'>" + total.toFixed(2) + "</span>";
     divTotal.id = "total";
+    divTotal.style.fontSize = "20px";
     document.getElementById("carrinho").appendChild(divTotal);
   }

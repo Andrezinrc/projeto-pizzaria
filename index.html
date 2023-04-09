@@ -11,45 +11,47 @@
     <title>projeto-pizzaria</title>
 </head>
 <body>
-    <div class="container-principal">
-        <div class="cabecalho-titulo">
-            <h1>Pizzaria do Andre</h1>
-        </div>
-        <div class="container">
-            <div class="card-pizzas">
-                <div class="card-pizza">
-                    <img src="img/Pizza-Margherita-1024x685.jpg" alt="">
-                    <h3>Margueritta</h3>
-                    <h2>R$30,00</h2>
-                    <button class="botao-add-carrinho" onclick="adicionarAoCarrinho('Margueritta', 'img/Pizza-Margherita-1024x685.jpg')">Adicionar ao carrinho</button>
+    <main>
+        <div class="container-principal">
+            <div class="cabecalho-titulo">
+                <h1>Pizzaria do Andre</h1>
+            </div>
+            <div class="container">
+                <div class="card-pizzas">
+                    <div class="card-pizza">
+                        <img src="img/Pizza-Margherita-1024x685.jpg" alt="">
+                        <h3>Margueritta</h3>
+                        <h2>R$30,00</h2>
+                        <button class="botao-add-carrinho" onclick="adicionarAoCarrinho('Margueritta', 'img/Pizza-Margherita-1024x685.jpg')">Adicionar ao carrinho</button>
+                    </div>
+                    <div class="card-pizza">
+                        <img src="img/istockphoto-519526540-612x612.jpg" alt="">
+                        <h3>Mussarela</h3>
+                        <h2>R$30,00</h2>
+                        <button class="botao-add-carrinho" onclick="adicionarAoCarrinho('Mussarela', 'img/istockphoto-519526540-612x612.jpg')">Adicionar ao carrinho</button>
+                    </div>
+                    <div class="card-pizza">
+                        <img src="img/pizza_calabresa_e_mussarela_4389_600.jpg" alt="">
+                        <h3>Calabresa</h3>
+                        <h2>R$30,00</h2>
+                        <button class="botao-add-carrinho" onclick="adicionarAoCarrinho('Calabresa', 'img/pizza_calabresa_e_mussarela_4389_600.jpg')">Adicionar ao carrinho</button>
+                    </div>
+                    <div class="card-pizza">
+                        <img src="img/360_F_373770979_FuRHQsR4r0zEJ7r8ndDQYkU5zJjnMOER.jpg" alt="">
+                        <h3>Napolitana</h3>
+                        <h2>R$30,00</h2>
+                        <button class="botao-add-carrinho" onclick="adicionarAoCarrinho('Napolitana', 'img/360_F_373770979_FuRHQsR4r0zEJ7r8ndDQYkU5zJjnMOER.jpg')">Adicionar ao carrinho</button>
+                    </div>
                 </div>
-                <div class="card-pizza">
-                    <img src="img/istockphoto-519526540-612x612.jpg" alt="">
-                    <h3>Mussarela</h3>
-                    <h2>R$30,00</h2>
-                    <button class="botao-add-carrinho" onclick="adicionarAoCarrinho('Mussarela', 'img/istockphoto-519526540-612x612.jpg')">Adicionar ao carrinho</button>
-                </div>
-                <div class="card-pizza">
-                    <img src="img/pizza_calabresa_e_mussarela_4389_600.jpg" alt="">
-                    <h3>Calabresa</h3>
-                    <h2>R$30,00</h2>
-                    <button class="botao-add-carrinho" onclick="adicionarAoCarrinho('Calabresa', 'img/pizza_calabresa_e_mussarela_4389_600.jpg')">Adicionar ao carrinho</button>
-                </div>
-                <div class="card-pizza">
-                    <img src="img/360_F_373770979_FuRHQsR4r0zEJ7r8ndDQYkU5zJjnMOER.jpg" alt="">
-                    <h3>Napolitana</h3>
-                    <h2>R$30,00</h2>
-                    <button class="botao-add-carrinho" onclick="adicionarAoCarrinho('Napolitana', 'img/360_F_373770979_FuRHQsR4r0zEJ7r8ndDQYkU5zJjnMOER.jpg')">Adicionar ao carrinho</button>
+                <div class="total-a-pagar">
+                    <div class="container-titulo-pagar">
+                        <h2>Meu carrinho</h2>
+                    </div>
+                    <div id="carrinho"></div>
                 </div>
             </div>
-            <div class="total-a-pagar">
-                <div class="container-titulo-pagar">
-                    <h2>Meu carrinho</h2>
-                </div>
-                <div id="carrinho"></div>
-            </div>
         </div>
-    </div>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>
